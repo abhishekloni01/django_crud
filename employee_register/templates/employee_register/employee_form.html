@@ -1,16 +1,16 @@
 {% extends 'employee_register/base.html' %}
-{% load crispy_forms_tags %}
+{% comment %} {% load crispy_forms_tags %} {% endcomment %}
 {% block content %}
     <form method="post" action="" autocomplete="off">
     {% csrf_token %}
-        {{form.fullname|as_crispy_field}}
-        {{form.mobile|as_crispy_field}}
+        {{form.fullname}}
+        {{form.mobile}}
         <div class="row">
             <div class="col-md-4">
-                {{form.emp_code|as_crispy_field}}
+                {{form.emp_code}}
             </div>
             <div class="col-md-8">
-                {{form.position|as_crispy_field}}
+                {{form.position}}
             </div>
         </div>
         <div class="row">
