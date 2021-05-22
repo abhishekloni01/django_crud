@@ -3,16 +3,51 @@
 {% block content %}
     <form method="post" action="" autocomplete="off">
     {% csrf_token %}
-        {{form.fullname}}
-        {{form.mobile}}
-        <div class="row">
-            <div class="col-md-4">
-                {{form.emp_code}}
-            </div>
-            <div class="col-md-8">
-                {{form.position}}
-            </div>
-        </div>
+        <table class="table table-borderless">
+            <tbody>
+             <tr>
+                
+                    <td>
+                        <div class="mb-3">
+                            <label  class="form-label">Full Name</label>
+                                {{form.fullname}}
+                            
+                        </div>
+                    </td>
+            </tr>
+
+            <tr>   
+                <td>
+                            <div class="mb-3">
+                            <label class="form-label">Mobile</label>
+                            {{form.mobile}}
+                        </div>
+                    </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="mb-3">
+                            <label  class="form-label">Emp code</label>
+                            {{form.emp_code}}
+                        </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <div class="mb-3">
+                                <label  class="form-label">Position</label>
+                                {{form.position}}
+                            </div>
+                </td>
+            </tr>
+     
+            
+            </tbody>
+        </table>
+
+        
         <div class="row">
             <div class="col-md-8">
                 <button type="submit" class="btn btn-success btn-block btn-lg"><i class="fa fa-database" aria-hidden="true"></i>

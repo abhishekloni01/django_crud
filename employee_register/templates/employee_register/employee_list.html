@@ -30,11 +30,15 @@
                             <button type="submit" class="btn">
                                    <i class="far fa-trash-alt fa-lg text-danger float-right"></i> 
                             </button>
+                            
                         </form>
                     </td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
+<a href="{% url 'employee_insert' %}" class="btn btn-secondary btn-block btn-lg" >
+                    <i class="fas fa-stream"></i>Back to list
+                </a>
 {% endblock content %}
 
